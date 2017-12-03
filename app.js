@@ -5,6 +5,7 @@ import bodyParser from 'body-parser'
 import router from './routes'
 
 const app = express()
+app.set('port', (process.env.PORT || 3000));
 
 /*
 app.use((req, res, next) => {
@@ -21,6 +22,9 @@ app.use(bodyParser.urlencoded({ extended: true, uploadDir: '/tmp/uploads', limit
 
 app.use(router)
 
-app.listen(3000, () => console.log('Server started motherfucker...'))
+app.listen(
+  app.get('port'),
+  () => console.log('Server started motherfucker... at', app.get('port'))
+)
 
 export default app
