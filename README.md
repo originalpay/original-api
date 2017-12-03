@@ -5,7 +5,7 @@
 
 ### Reconhecer imagem
 
-**POST `/detect-image`**
+**POST `https://fdirect.herokuapp.com/detect-image`**
 
 _body_ - `form-data`
 ```
@@ -14,7 +14,7 @@ file => file path
 
 ### Realizar pagamentos
 
-**POST `/payments`**
+**POST `https://fdirect.herokuapp.com/payments`**
 
 _body_ - `application/json`
 ```json
