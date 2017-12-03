@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true, uploadDir: '/tmp/uploads', limit
 
 app.use(router)
 
-app.listen(8080, () => console.log('Server started motherfucker...'))
+app.listen(80, () => console.log('Server started motherfucker...'))
 
 export default app
