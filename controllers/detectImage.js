@@ -30,11 +30,9 @@ class DetectImageController {
 
     console.log('Probably product', probablyProduct)
 
-    if (probablyProduct) {
-      return response.status(200).json(Database.products[0])
-    }
-
-    response.status(404).json({ message: 'Product not found' })
+    return probablyProduct
+      ? response.status(200).json(Database.products[0])
+      : response.status(404).json({ message: 'Product not found' })
   }
 }
 
